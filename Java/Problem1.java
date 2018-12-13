@@ -11,12 +11,12 @@ public class Problem1 {
 	public static void main(String[] args){
 		int numb = 1000;
 		int numbOfMultiples;
-		int[] multiples = new int[1000];
+		int[] multiples = new int[numb];
 		int sumOfMultiples = 0;
 		int count = 0;
 
 		// First step find all multiples of 3 and 5 or both below 1000
-		for (int i = 0; i <= 1000; i++){
+		for (int i = 0; i < numb; i++){
 			if((i%3) == 0){
 				multiples[count] = i;
 				count++;
