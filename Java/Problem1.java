@@ -6,13 +6,18 @@ Problem 1:
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 
+To Test: javac -cp .:junit-4.10.jar EulerUnitTests.java
+To Rum: java -cp .:junit-4.10.jar:hamcrest-core-2.1-rc4.jar org.junit.runner.JUnitCore EulerUnitTests
 */
+
+
 public class Problem1 {
 	public static void main(String[] args){
-		System.out.println(Solve());
+		Problem1 test = new Problem1();
+		System.out.println(test.solve());
 	}
 
-	public static String Solve(){
+	public String solve(){
 		int numb = 1000;
 		int sumOfMultiples = 0;
 		// First step find all multiples of 3 and 5 or both below 1000
