@@ -4,6 +4,10 @@ By Abdullahi Farah
 
 Unit Tests for all the project Euler Solutions
 
+Dependencies: 
+		junit-4.10.jar
+		hamcrest-core-2.1-rc4.jar
+
 
 To Test: javac -cp .:junit-4.10.jar EulerUnitTests.java
 To Rum: java -cp .:junit-4.10.jar:hamcrest-core-2.1-rc4.jar org.junit.runner.JUnitCore EulerUnitTests
@@ -33,6 +37,6 @@ public class EulerUnitTests{
 	public void problem3Test(){
 		Problem3 problem3 = new Problem3();
 		String result = problem3.solve();
-		assertEquals("", result);
+		assertEquals("6857", result);
 	}
 }

@@ -19,17 +19,36 @@ public class Problem2 {
 
 	public String solve(){
 		// For initial even terms
-		int sum = 2;
-		int initialValue = 2;
-		int nextValue = 3;
+		int sum = 0;
+		int initialValue = 1;
+		int nextValue = 1;
+		int count = 4000000;
 
-		while(nextValue < 4000000){
+		while(nextValue < count){
 			if (nextValue%2 == 0){
 				sum += nextValue;
 			}
 			nextValue += initialValue;
 			initialValue = nextValue - initialValue;
 			
+		}
+
+		return Integer.toString(sum);
+	}
+
+	// Since every third fibonacci number is even, the solution below avoids having to check whether a number is even
+	public String solveVersion2(){
+		int sum = 0;
+		int initialValue = 1;
+		int nextValue = 1;
+		int thirdValue = initialValue + nextValue;
+		int count = 4000000;
+
+		while (thirdValue < count) {
+			sum += thirdValue;
+			initialValue = nextValue + thirdValue;
+			nextValue = initialValue + thirdValue;
+			thirdValue = nextValue + initialValue;
 		}
 
 		return Integer.toString(sum);
