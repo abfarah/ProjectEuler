@@ -14,7 +14,19 @@ import java.lang.Math;
 public class Problem3 {
 	public static void main(String[] args){
 		Problem3 test = new Problem3();
+		long startTime1 = System.nanoTime();
 		System.out.println(test.solve());
+		long endTime1 = System.nanoTime();
+		long duration1 = (endTime1 - startTime1);
+
+		long startTime2 = System.nanoTime();
+		System.out.println(test.solveVersion2());
+		long endTime2 = System.nanoTime();
+		long duration2 = (endTime2 - startTime2);
+
+		System.out.println("Old version took this long: " + Long.toString(duration1));
+		System.out.println("New version took this long: " + Long.toString(duration2));
+		
 	}
 
 	public String solve(){
@@ -47,5 +59,45 @@ public class Problem3 {
 			}
 		}
 		return isNumbPrime;
+	}
+
+	// Another more efficient method in finding the largest prime factor
+	// Significantly more efficient then previous method
+	public String solveVersion2(){
+		long bigNumber = 600851475143L;
+		long primeFactor = 3;
+		long previousFactor = 1;
+		double factorLimit = Math.sqrt(bigNumber);
+
+		if (bigNumber == 1 || bigNumber == 2 || bigNumber == 3){
+			return Long.toString(bigNumber);
+		}
+
+		// First step is to check if the number is even and lower the number respectively
+		if (bigNumber %2 == 0){
+			while(bigNumber%2 == 0){
+				bigNumber /= 2;
+			}
+			previousFactor = 2;
+		}
+
+		//Second step is to parse through factors and find largest prime factor
+		while(primeFactor < factorLimit){
+			if(bigNumber% primeFactor == 0){
+				bigNumber /= primeFactor;
+				previousFactor = primeFactor;
+				while (bigNumber%primeFactor == 0){
+					bigNumber /= primeFactor;
+				}
+				factorLimit = Math.sqrt(bigNumber);
+			}
+			primeFactor += 2;
+		}
+
+		if (bigNumber == 1){
+			return Long.toString(previousFactor);
+		} else {
+			return Long.toString(bigNumber);
+		}
 	}
 }
