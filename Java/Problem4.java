@@ -18,10 +18,10 @@ public class Problem4 {
 	//Only going to check the products of 900 to 999
 	public String solve(){
 		int numb = -1;
-		for (int i = 100; i < 1000; i++){
-		    for(int j = 100; j < 1000; j++){
+		for (int i = 999; i > 900; i--){
+		    for(int j = 999; j > 900; j--){
 		        int product = i * j;
-		        if(isPalindrome(Integer.toString(product)) && product > numb){
+		        if(product > numb && isPalindrome(Integer.toString(product))){
 		            numb = product;
 		        }
 		    }
