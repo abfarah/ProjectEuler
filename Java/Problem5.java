@@ -1,9 +1,9 @@
 /*
 By Abdullahi Farah
 Problem 5:
-A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 * 99.
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
 
-Find the largest palindrome made from the product of two 3-digit numbers.
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 */
 
 public class Problem5 {
@@ -13,6 +13,25 @@ public class Problem5 {
 	}
 
 	public String solve(){
-		return "fail";
+		//Starting at 2520 since I know no smaller integer is evenly divisible from 1 - 20
+		int result = 2520;
+
+		while (isEvenlyDivisible(result, 1, 20) == false){
+			result ++;
+		}
+
+		return Integer.toString(result);
+	}
+
+	public boolean isEvenlyDivisible(int numb, int rangeStart, int rangeEnd){
+		boolean result = true;
+		for(int i = rangeStart; i <= rangeEnd; i ++){
+			if (numb % i != 0){
+				result = false;
+				break;
+			}
+		}
+
+		return result;
 	}
 }

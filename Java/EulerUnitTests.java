@@ -51,6 +51,6 @@ public class EulerUnitTests{
 	public void problem5Test(){
 		Problem5 problem5 = new Problem5();
 		String result = problem5.solve();
-		assertEquals("pass", result);
+		assertEquals("232792560", result);
 	}
 }
