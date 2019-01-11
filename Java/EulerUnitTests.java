@@ -21,36 +21,43 @@ public class EulerUnitTests{
 
 	@Test
 	public void problem1Test(){
-		Problem1 problem1 = new Problem1();
-		String result = problem1.solve();
+		Problem1 test = new Problem1();
+		String result = test.solve();
 		assertEquals("233168", result);
 	}
 
 	@Test
 	public void problem2Test(){
-		Problem2 problem2 = new Problem2();
-		String result = problem2.solve();
+		Problem2 test = new Problem2();
+		String result = test.solve();
 		assertEquals("4613732", result);
 	}
 
 	@Test
 	public void problem3Test(){
-		Problem3 problem3 = new Problem3();
-		String result = problem3.solve();
+		Problem3 test = new Problem3();
+		String result = test.solve();
 		assertEquals("6857", result);
 	}
 	
 	@Test
 	public void problem4Test(){
-		Problem4 problem4 = new Problem4();
-		String result = problem4.solve();
+		Problem4 test = new Problem4();
+		String result = test.solve();
 		assertEquals("906609", result);
 	}
 
 	@Test
 	public void problem5Test(){
-		Problem5 problem5 = new Problem5();
-		String result = problem5.solve();
+		Problem5 test = new Problem5();
+		String result = test.solve();
 		assertEquals("232792560", result);
+	}
+
+	@Test
+	public void problem6Test(){
+		Problem6 test = new Problem6();
+		String result = test.solve();
+		assertEquals("25164150", result);
 	}
 }
