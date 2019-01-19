@@ -14,7 +14,20 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 public class Problem2 {
 	public static void main(String[] args){
 		Problem2 test = new Problem2();
-		System.out.println(test.solve());
+		long startTime1 = System.nanoTime();
+		test.solve();
+		long endTime1 = System.nanoTime();
+		long duration1 = (endTime1 - startTime1);
+
+		long startTime2 = System.nanoTime();
+		test.solve2();
+		long endTime2 = System.nanoTime();
+		long duration2 = (endTime2 - startTime2);
+
+		System.out.println("Solution = " + test.solve2());
+		
+		System.out.println("Brute force solution took this long: " + duration1 + " nanoSeconds");
+		System.out.println("Second solution took this long: " + duration2 + " nanoSeconds");
 	}
 
 	public String solve(){
@@ -36,8 +49,9 @@ public class Problem2 {
 		return Integer.toString(sum);
 	}
 
-	// Since every third fibonacci number is even, the solution below avoids having to check whether a number is even
-	public String solveVersion2(){
+	// Since every third fibonacci number is even, the solution below avoids having to check whether a number is even.
+	// This allows us to only do computations on every third fibinocci number.
+	public String solve2(){
 		int sum = 0;
 		int initialValue = 1;
 		int nextValue = 1;
