@@ -73,8 +73,10 @@ public class Problem3 {
 			return Long.toString(bigNumber);
 		}
 
-		// First step is to check if the number is even and lower the number respectively
+		// First step is to check if the number is even and divide by 2 respectfully
 		if (bigNumber %2 == 0){
+			bigNumber /= 2;
+
 			while(bigNumber%2 == 0){
 				bigNumber /= 2;
 			}
@@ -82,7 +84,7 @@ public class Problem3 {
 		}
 
 		//Second step is to parse through factors and find largest prime factor
-		while(primeFactor < factorLimit){
+		while(primeFactor <= factorLimit && bigNumber > 1){
 			if(bigNumber% primeFactor == 0){
 				bigNumber /= primeFactor;
 				previousFactor = primeFactor;
