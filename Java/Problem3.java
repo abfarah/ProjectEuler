@@ -15,17 +15,20 @@ public class Problem3 {
 	public static void main(String[] args){
 		Problem3 test = new Problem3();
 		long startTime1 = System.nanoTime();
-		System.out.println(test.solve());
+		test.solve();
 		long endTime1 = System.nanoTime();
 		long duration1 = (endTime1 - startTime1);
 
+		Problem1 test2 = new Problem1();
 		long startTime2 = System.nanoTime();
-		System.out.println(test.solveVersion2());
+		test.solve2();
 		long endTime2 = System.nanoTime();
 		long duration2 = (endTime2 - startTime2);
 
-		System.out.println("Old version took this long: " + Long.toString(duration1));
-		System.out.println("New version took this long: " + Long.toString(duration2));
+		System.out.println("Solution = " + test.solve2());
+		
+		System.out.println("Brute force solution took this long: " + duration1 + " nanoSeconds");
+		System.out.println("Second solution took this long: " + duration2 + " nanoSeconds");
 		
 	}
 
@@ -63,7 +66,7 @@ public class Problem3 {
 
 	// Another more efficient method in finding the largest prime factor
 	// Significantly more efficient then previous method
-	public String solveVersion2(){
+	public String solve2(){
 		long bigNumber = 600851475143L;
 		long primeFactor = 3;
 		long previousFactor = 1;
