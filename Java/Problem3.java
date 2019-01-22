@@ -66,7 +66,7 @@ public class Problem3 {
 
 	// Another more efficient method in finding the largest prime factor
 	// Significantly more efficient then previous method
-	public Strin(){
+	public String solve2(){
 		long bigNumber = 600851475143L;
 		long primeFactor = 3;
 		long previousFactor = 1;
