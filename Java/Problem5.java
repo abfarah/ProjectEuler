@@ -9,7 +9,7 @@ What is the smallest positive number that is evenly divisible by all of the numb
 public class Problem5 {
 	public static void main(String[] args){
 		Problem5 test = new Problem5();
-		long startTime1 = System.nanoTime();
+		/*long startTime1 = System.nanoTime();
 		test.solve();
 		long endTime1 = System.nanoTime();
 		long duration1 = (endTime1 - startTime1);
@@ -18,12 +18,12 @@ public class Problem5 {
 		long startTime2 = System.nanoTime();
 		test.solve2();
 		long endTime2 = System.nanoTime();
-		long duration2 = (endTime2 - startTime2);
+		long duration2 = (endTime2 - startTime2);*/
 
-		System.out.println("Solution = " + test.solve2());
+		System.out.println("Solution = " + test.solve());
 		
-		System.out.println("Brute force solution took this long: " + duration1 + " nanoSeconds");
-		System.out.println("Second solution took this long: " + duration2 + " nanoSeconds");
+		//System.out.println("Brute force solution took this long: " + duration1 + " nanoSeconds");
+		//System.out.println("Second solution took this long: " + duration2 + " nanoSeconds");
 	}
 
 	public String solve(){
@@ -49,7 +49,18 @@ public class Problem5 {
 		return result;
 	}
 
-	public String solve2(){
-		return "";
-	}
+	/*public String solve2(){
+		int[] primeFactors = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+		int numbDivisiblyBy = 20;
+		int count = 1;
+		int result = 1;
+		int exponent = 1;
+		boolean isdivisible = true;
+
+		while(primeFactors[count] <= numbDivisiblyBy){
+			exponent = 1;
+		}
+
+		return "lol";
+	}*/
 }
