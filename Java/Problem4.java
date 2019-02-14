@@ -62,16 +62,23 @@ public class Problem4 {
 		int numb = 999;
 		int count;
 		int palindrome = 0;
+		int divisbleCount;
 		
 		while (numb >= 100) {
-			count = 999;
+			if (numb % 11 == 0){
+				count = 999;
+				divisbleCount = 1;
+			} else {
+				count = 990;
+				divisbleCount = 11;
+			}
 			while (count >= numb) {
 				if (count * numb <= palindrome){
 					break;
 				} else if (isPalindrome(Integer.toString(count * numb))) {
 					palindrome = count * numb;
 				}
-				count --;
+				count = count - divisbleCount;
 			}
 			numb--;
 		}
