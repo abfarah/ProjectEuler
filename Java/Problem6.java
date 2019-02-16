@@ -3,7 +3,7 @@ By Abdullahi Farah
 Problem 6:
 The sum of the squares of the first ten natural numbers is,
 
-12 + 22 + ... + 102 = 385
+1^2 + 2^2 + ... + 10^2 = 385
 The square of the sum of the first ten natural numbers is,
 
 (1 + 2 + ... + 10)2 = 552 = 3025
@@ -21,26 +21,15 @@ public class Problem6 {
 	}
 
 	public String solve(){
-		long difference = 0L;
-		int count = 100;
-		difference = squareOfSum(count) - sumOfSquares(count);
-		return Long.toString(difference);
-	}
+		int numb = 100;
+		int sumOfSquares = 0;
+		int squareOfSum = 0;
 
-	public long sumOfSquares(int count){
-		long sumOfSquares = 0L;
-		for(int i = 1; i <= count; i++){
+		for (int i = 1; i <= numb; i++){
 			sumOfSquares += i*i;
-		}
-		return sumOfSquares;
-	}
+			squareOfSum += i;
 
-	public long squareOfSum(int count){
-		long sum = 0L;
-		for(int i = 1; i <= count; i++){
-			sum += i;
 		}
-		sum =  sum * sum;
-		return sum;
+		return Integer.toString((squareOfSum * squareOfSum) - sumOfSquares);
 	}
 }
