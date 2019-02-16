@@ -14,7 +14,6 @@ public class Problem5 {
 		long endTime1 = System.nanoTime();
 		long duration1 = (endTime1 - startTime1);
 
-		Problem1 test2 = new Problem1();
 		long startTime2 = System.nanoTime();
 		test.solve2();
 		long endTime2 = System.nanoTime();
@@ -49,7 +48,7 @@ public class Problem5 {
 		return result;
 	}
 
-	/*public String solve2(){
+	public String solve2(){
 		int[] primeFactors = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
 		int numbDivisiblyBy = 20;
 		int count = 1;
@@ -61,6 +60,6 @@ public class Problem5 {
 			exponent = 1;
 		}
 
-		return "lol";
-	}*/
+		return "fail";
+	}
 }
