@@ -16,7 +16,6 @@ public class Problem4 {
 		long endTime1 = System.nanoTime();
 		long duration1 = (endTime1 - startTime1);
 
-		Problem1 test2 = new Problem1();
 		long startTime2 = System.nanoTime();
 		test.solve2();
 		long endTime2 = System.nanoTime();
