@@ -46,6 +46,8 @@ public class Problem6 {
 		return Integer.toString((squareOfSum * squareOfSum) - sumOfSquares);
 	}
 
+	// Used the equation for sums of all numbers below x
+	// sum(x) = x(x+1)/2
 	public String solve2(){
 		int numb = 100;
 		int sumOfSquares = (((2*numb +1)*(numb +1)*numb)/6);
