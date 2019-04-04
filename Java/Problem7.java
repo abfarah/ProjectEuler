@@ -18,10 +18,10 @@ public class Problem7 {
 	public boolean isPrime(int number){
 		boolean isNumbPrime = true;
 		double limit = Math.sqrt(number);
-		if(number == 0 || number%2==0){
+		if(number == 0 || number==1 || number %2==0){
 			return false;
 		}
-		if(number ==1) {
+		if(number ==2 || number ==3) {
 			return true;
 		}
 		for (int i = 3; i <= limit; i += 2) {
