@@ -12,20 +12,7 @@ import java.lang.Math;
 public class Problem7 {
 	public static void main(String[] args){
 		Problem7 test = new Problem7();
-		/*long startTime1 = System.nanoTime();
-		test.solve();
-		long endTime1 = System.nanoTime();
-		long duration1 = (endTime1 - startTime1);
-
-		long startTime2 = System.nanoTime();
-		test.solve2();
-		long endTime2 = System.nanoTime();
-		long duration2 = (endTime2 - startTime2);*/
-
 		System.out.println("Solution = " + test.solve());
-		
-		//System.out.println("Brute force solution took this long: " + duration1 + " nanoSeconds");
-		//System.out.println("Second solution took this long: " + duration2 + " nanoSeconds");
 	}
 
 	public boolean isPrime(int number){
@@ -45,7 +32,6 @@ public class Problem7 {
 		return isNumbPrime;
 	}
 
-	//
 	public String solve(){
 		int ithPrime = 10001;
 		int result = 3;
