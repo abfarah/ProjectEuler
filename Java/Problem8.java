@@ -27,8 +27,6 @@ The four adjacent digits in the 1000-digit number that have the greatest product
 Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 */
 
-import java.lang.Math;
-
 public class Problem8 {
 	public static void main(String[] args){
 		Problem8 test = new Problem8();

@@ -6,8 +6,6 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 */
 
-import java.lang.Math;
-
 public class Problem4 {
 	public static void main(String[] args){
 		Problem4 test = new Problem4();
