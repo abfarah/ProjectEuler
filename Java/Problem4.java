@@ -32,27 +32,13 @@ public class Problem4 {
 		for (int i = 999; i > 900; i--){
 		    for(int j = 999; j > 900; j--){
 		        int product = i * j;
-		        if(product > numb && isPalindrome(Integer.toString(product))){
+		        if(product > numb && Common.isPalindrome(Integer.toString(product))){
 		            numb = product;
 		        }
 		    }
 		}
 
 		return Integer.toString(numb);
-	}
-	
-	private boolean isPalindrome(String text) {
-	    String reverse = "";
-	    for(int i = text.length() - 1; i >= 0; i--)
-        {
-            reverse = reverse + text.charAt(i);
-        }
-        
-        if (text.equals(reverse)){
-            return true;
-        } else {
-            return false;
-        }
 	}
 
 	public String solve2(){
@@ -72,7 +58,7 @@ public class Problem4 {
 			while (count >= numb) {
 				if (count * numb <= palindrome){
 					break;
-				} else if (isPalindrome(Integer.toString(count * numb))) {
+				} else if (Common.isPalindrome(Integer.toString(count * numb))) {
 					palindrome = count * numb;
 				}
 				count = count - divisbleCount;

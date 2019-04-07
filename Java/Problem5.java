@@ -30,23 +30,11 @@ public class Problem5 {
 		//Starting at 2520 since I know no smaller integer is evenly divisible from 1 - 20
 		int result = 2520;
 
-		while (isEvenlyDivisible(result, 1, 20) == false){
+		while (Common.isEvenlyDivisible(result, 1, 20) == false){
 			result ++;
 		}
 
 		return Integer.toString(result);
-	}
-
-	public boolean isEvenlyDivisible(int numb, int rangeStart, int rangeEnd){
-		boolean result = true;
-		for(int i = rangeStart; i <= rangeEnd; i ++){
-			if (numb % i != 0){
-				result = false;
-				break;
-			}
-		}
-
-		return result;
 	}
 
 	public String solve2(){

@@ -35,8 +35,8 @@ public class Problem3 {
 		long largestPrimeFactor = 0;
 		long numb = 600851475143L;
 
-		// First step is to check whether the number inputed is a prime number using function IsPrime defined below
-		if (isPrime(numb)){
+		// First step is to check whether the number inputed is a prime number using function IsPrime defined in common file
+		if (Common.isPrime(numb)){
 			return Long.toString(numb);
 		}
 
@@ -44,23 +44,12 @@ public class Problem3 {
 		// Was initially stopping the for loop when i < numb/2 but program was taking too long so switched to sqrt of numb to increase speed.
 		// Came to the conclusion to use Square root since most composite numbers don't have a greatest prime factor larger then it's square root.
 		for(long i = 3; i < Math.sqrt(numb); i+=2){
-			if (numb%i == 0 && isPrime(i)) {
+			if (numb%i == 0 && Common.isPrime(i)) {
 				largestPrimeFactor = i;
 			}
 		}
 
 		return Long.toString(largestPrimeFactor);
-	}
-
-	public boolean isPrime(long number){
-		boolean isNumbPrime = true;
-		for(long i = 2; i < number/2; i++){
-			if (number %i == 0){
-				isNumbPrime = false;
-				break;
-			}
-		}
-		return isNumbPrime;
 	}
 
 	// Another more efficient method in finding the largest prime factor
