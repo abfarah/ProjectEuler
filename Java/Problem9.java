@@ -10,38 +10,25 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 */
 
-import java.lang.Math;
-
 public class Problem9 {
 	public static void main(String[] args){
 		Problem9 test = new Problem9();
 		System.out.println("Solution = " + test.solve());
 	}
 	public String solve(){
-		int a = 0;
-		int b = 0;
+		int limit = 1000;
 		int c = 0;
-		int aSquared = 0;
-		int bSquared = 0;
-		int csSuared = 0;
-		int product = 0;
 
-		for(int i = 0; i < 1000; i++){
-			for(int j = 0; j < 1000-i; j++){
-				a=i;
-				b=j;
-				c=1000-(a+b);
-				aSquared=a*a;
-				bSquared=b*b;
-				csSuared=c*c;
+		for(int a = 0; a < limit; a++){
+			for(int b = 0; b < limit-a; b++){
+				c=limit-(a+b);
 
-				if(aSquared+bSquared==csSuared && a!=0 && b!=0 && c!=0){
-					product = a*b*c;
-					return Integer.toString(product);
+				if((a*a)+(b*b)==(c*c) && a!=0 && b!=0 && c!=0){
+					return Integer.toString(a*b*c);
 				}
 
 			}
 		}
-		return Integer.toString(product);
+		return "No Pythagorean triplet exists for input";
 	}
 }
