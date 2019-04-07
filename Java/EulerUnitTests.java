@@ -74,4 +74,11 @@ public class EulerUnitTests{
 		String result = test.solve();
 		assertEquals("23514624000", result);
 	}
+
+	@Test
+	public void problem9Test(){
+		Problem9 test = new Problem9();
+		String result = test.solve();
+		assertEquals("31875000", result);
+	}
 }
