@@ -13,4 +13,4 @@ def solve(count):
 			result += i;
 	return result
 
-print solve()
+print solve(count)
