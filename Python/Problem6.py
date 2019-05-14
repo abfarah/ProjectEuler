@@ -17,7 +17,6 @@ def solve():
     limit = 100
     sumOfSquares = ((2 * limit + 1)*(limit+1)*limit)/6
     squareOfSum = limit*(limit+1)/2
-    result = (squareOfSum ** 2) - sumOfSquares
-    return "result is {}".format(result)
+    return (squareOfSum ** 2) - sumOfSquares
 
 print(solve())
