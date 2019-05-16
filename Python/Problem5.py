@@ -22,6 +22,6 @@ def solve():
                 check = False
         result *= (primeNumb[count]**exponent)
         count += 1
-    return result
+    return int(result)
 
 print(solve())
