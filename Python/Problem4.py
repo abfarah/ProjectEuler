@@ -5,9 +5,7 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 #
 
-def isPalindrome(s):
-    reverse = s[::-1]
-    return (reverse == s)
+import Common
 
 def solve():
     largestPalindrome = 0
@@ -22,7 +20,7 @@ def solve():
         while j >= i:
             if (j*i) <= largestPalindrome:
                 break
-            if(isPalindrome(str(i*j))):
+            if(Common.isPalindrome(str(i*j))):
                 largestPalindrome = i*j
             j -= divCount
         i -= 1
