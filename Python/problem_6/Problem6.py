@@ -19,4 +19,3 @@ def solve():
     squareOfSum = limit*(limit+1)/2
     return (squareOfSum ** 2) - sumOfSquares
 
-print(solve())

@@ -20,5 +20,3 @@ def solve():
 		nextValue = initialValue + thirdValue
 		thirdValue = nextValue + initialValue
 	return sum
-
-print solve()

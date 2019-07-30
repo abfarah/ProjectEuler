@@ -26,4 +26,3 @@ def solve():
         i -= 1
     return largestPalindrome
 
-print(solve())

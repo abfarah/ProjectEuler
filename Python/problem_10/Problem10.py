@@ -14,5 +14,3 @@ def solve(count):
         if Common.isPrime(i):
             result += i
     return result
-
-print solve(2000000)

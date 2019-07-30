@@ -23,5 +23,3 @@ def solve():
         result *= (primeNumb[count]**exponent)
         count += 1
     return int(result)
-
-print(solve())

@@ -31,15 +31,14 @@ largeNumbString = "7316717653133062491922511967442657474235534919493496983520312
 largeNumb = list(largeNumbString)
 largeNumb = map(int, largeNumb)
 
-def solve(list):
+def solve():
     marker = 13
     result = 0
-    for i in range(len(list)-13):
+    for i in range(len(largeNumb)-13):
         temp = 1
         for j in range(marker):
-            temp *= list[j+i]
+            temp *= largeNumb[j+i]
         if temp >= result:
             result = temp
     return result
 
-print solve(largeNumb)

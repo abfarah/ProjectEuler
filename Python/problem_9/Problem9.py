@@ -10,7 +10,8 @@
 # Find the product abc.
 # 
 
-def solve(limit):
+def solve():
+    limit = 1000
     c = 0
     for a in range(limit):
         for b in range(limit-a):
@@ -18,5 +19,3 @@ def solve(limit):
             if a**2 + b**2 == c**2 and a!=0 and b!=0 and c!=0:
                 return a*b*c
     return "No Pythagorean triplit exists for input"
-
-print solve(1000)
