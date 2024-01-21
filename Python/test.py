@@ -7,7 +7,6 @@ def test_problem(problem_number, input_arg=None):
     # Dynamically import the problem module
     problem_module = importlib.import_module(f"problem_{problem_number}.Problem{problem_number}")
 
-    # Check if the module has a 'solve' function
     if hasattr(problem_module, 'solve'):
         if input_arg is not None:
             return problem_module.solve(input_arg)
