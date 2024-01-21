@@ -12,4 +12,3 @@ def solve(count):
         five += 5
     return result
 
-print(solve(1000))
