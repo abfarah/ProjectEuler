@@ -5,7 +5,7 @@ one_variable_problems = {1: 1000, 2: 4000000, 3: 600851475143}
 
 def test_problem(problem_number, input_arg=None):
     # Dynamically import the problem module
-    problem_module = importlib.import_module(f"problem_{problem_number}.Problem{problem_number}")
+    problem_module = importlib.import_module(f"problem{problem_number}")
 
     if hasattr(problem_module, 'solve'):
         if input_arg is not None:
@@ -17,7 +17,7 @@ def test_problem(problem_number, input_arg=None):
 
 # Test all problems
 def main():
-    for i in range(1, 5):
+    for i in range(1, 6):
         if i in one_variable_problems:
             result = test_problem(i, one_variable_problems[i])
         else:
