@@ -1,7 +1,7 @@
 import importlib
 
 # Define problems that require one variable and their test inputs
-one_variable_problems = {1: 1000, 2: 4000000, 3: 600851475143}
+one_variable_problems = {1: 1000, 2: 4000000, 3: 600851475143, 7: 10001}
 
 def test_problem(problem_number, input_arg=None):
     # Dynamically import the problem module
@@ -17,7 +17,7 @@ def test_problem(problem_number, input_arg=None):
 
 # Test all problems
 def main():
-    for i in range(1, 7):
+    for i in range(1, 8):
         if i in one_variable_problems:
             result = test_problem(i, one_variable_problems[i])
         else:
