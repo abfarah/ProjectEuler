@@ -17,7 +17,7 @@ def test_problem(problem_number, input_arg=None):
 
 # Test all problems
 def main():
-    for i in range(1, 13):
+    for i in range(1, 14):
         if i in one_variable_problems:
             result = test_problem(i, one_variable_problems[i])
         else:
